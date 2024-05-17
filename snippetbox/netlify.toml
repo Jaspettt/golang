@@ -1,6 +1,6 @@
 [build]
   publish = "public" 
-  command = "cd cmd/web && go build -o ../../main && cd ../../ && ./main"
+  command = "cd cmd/web && go mod tidy && go build -o ../../main && cd ../../ && ./main"
 
 [[redirects]]
   from = "/*"
