@@ -1,0 +1,8 @@
+[build]
+  publish = "public" 
+  command = "cd cmd/web && go build -o ../../main && cd ../../ && ./main"
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
