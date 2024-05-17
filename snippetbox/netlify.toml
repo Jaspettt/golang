@@ -1,6 +1,7 @@
 [build]
   publish = "public"
-  command = "echo 'Changing to cmd/web directory' && cd cmd/web && echo 'Running go mod tidy' && go mod tidy && echo 'Building the application' && go build -o ../../main && echo 'Changing back to root directory' && cd ../../ && echo 'Listing files in root directory' && ls -la && echo 'Running the application' && ./main"
+  command = "go mod tidy && cd cmd/web && go build -o ../../main && cd ../../ && main.exe"
+
 
 [[redirects]]
   from = "/*"
