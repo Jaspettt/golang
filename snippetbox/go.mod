@@ -1,6 +1,6 @@
 module snippetbox.victorkossinov.net
 
-go 1.23
+go 1.19
 
 require (
 	github.com/alexedwards/scs/mysqlstore v0.0.0-20231113091146-cef4b05350c8
