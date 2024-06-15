@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  postgres_db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: ${DBPASS}
+      POSTGRES_USER: ${DBUSER}
+      POSTGRES_DB: ${DBNAME}
+    ports:
+      - ":5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

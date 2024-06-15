@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+</head>
+<body class="flex flex-col h-screen justify-between">
+    <header class="h-16 bg-slate-800 text-white flex items-center">
+        <div class="container mx-auto">
+            <a href="/view/html/index.html" class="mr-6 text-xl font-semibold hover:bg-slate-700 px-4 py-3 rounded-xl">Home</a>
+            <a href="/view/html/products-page.html" class="text-xl font-semibold hover:bg-slate-700 px-4 py-3 rounded-xl">Products</a>    
+        </div>
+    </header>
+    <main class="mb-auto h-auto bg-slate-200">
+        <section class="container mx-auto mb-10 mt-6">
+            <form class="text-center">
+                <label for="filter">Filter: </label>
+                <input type="text" name="filter" id="filter" placeholder="e.g. Radiohead" class="py-1 px-2">
+
+<!--                <label for="color">Color: </label>-->
+<!--                <select name="color" id="color" class="py-1 px-2">-->
+<!--                    <option value="">&#45;&#45;Select Color&#45;&#45;</option>-->
+<!--                    <option value="Black">Black</option>-->
+<!--                    <option value="Green">Green</option>-->
+<!--                    <option value="Blue">Blue</option>-->
+<!--                    <option value="White">White</option>-->
+<!--                    <option value="Red">Red</option>-->
+<!--                </select>-->
+                <label for="sort">Sort by: </label>
+                <select name="sort" id="sort" class="rounded-sm py-1 px-2">
+                    <option value="id">--Select option--</option>
+                    <option value="artist">Artist</option>
+                    <option value="releasedate">Release Date</option>
+                    <option value="price">Price</option>
+                    <option value="rating">Rating</option>
+<!--                    <option value="vendor">Vendor</option>-->
+<!--                    <option value="engine_capacity">Engine capacity</option>-->
+<!--                    <option value="mileage">Mileage</option>-->
+                </select>
+                <select name="order" id="order" class="py-1 px-1">
+                    <option value="asc">↑ ASC</option>
+                    <option value="desc">↓ DESC</option>
+                </select>
+                <button id="searchBtn" class="text-white bg-blue-500 hover:bg-blue-700 px-7 py-1 rounded-sm">Find</button>
+            </form>
+        </section>
+        <section class="container mx-auto">
+            <div class="grid grid-cols-4 gap-2" id="offers">
+                
+            </div>
+        </section>
+        <section>
+            <div class="flex justify-center my-8">
+                <nav class="inline-flex" id="paginationPanel">
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-l hover:bg-gray-300">Previous</a>
+                    <a href="#" class="px-3 py-1 bg-blue-500 text-white hover:bg-gray-300">1</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 hover:bg-gray-300">2</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 hover:bg-gray-300">3</a>
+                    <span class="px-3 py-1 bg-gray-200 text-gray-700">...</span>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 hover:bg-gray-300">10</a>
+                    <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-r hover:bg-gray-300">Next</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full h-32 bg-blue-300 static bottom-0">
+        Hello I'm Footer
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/product-page.js"></script>
+</body>
+</html>
